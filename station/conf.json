@@ -3,7 +3,7 @@
     "heartbeat": false,
     "nb_registration": 0,
     "networks" : [
-        {"wifi": "Tchoupi", "password": "Harc0r3//Tch0up1"},
+        {"wifi": "Tchoupi", "password": "Hardc0r3//Tch0up1"},
         {"wifi": "Honor moi", "password": "12345678"}
     ],
     "simple_shutdown": true

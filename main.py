@@ -29,36 +29,36 @@ if __name__ == "__main__":
 
     # Fetch the current datas
 
-    # temp = temperature()
-    # press = get_pressure() * 1000
-    # hum = get_humidity()
-    # li = get_light()[0]
+    temp = temperature()
+    press = get_pressure() * 1000
+    hum = get_humidity()
+    li = get_light()[0]
     date = get_date()
     cpu = cpu_frequency()
     s_temp = station_temp()
     vol = battery_voltage()
     perc = battery_percentage(vol)
 
-    # # register the data
+    # register the data
 
-    # register(temp, press, hum, li, date)
-    # increment_registration()
+    register(temp, press, hum, li, date)
+    increment_registration()
 
     # Register the station state
 
     write_station_state(cpu, s_temp, vol, perc, date)
 
-    # # Every hour (6 datas) the datas are send to the api
+    # Every hour (6 datas) the datas are send to the api
 
-    # if NB_REGISTRATION > 5:
-    #     print("Send data to api...")
+    if NB_REGISTRATION > 5:
+        print("Send data to api...")
         
-    #     if send_data_to_api():
-    #         print("Data transfer succeeded")
-    #         reset_registration()
+        if send_data_to_api():
+            print("Data transfer succeeded")
+            reset_registration()
 
-    # # Put the station back to sleep
+    # Put the station back to sleep
 
-    # shutdown_station()
+    shutdown_station()
 
-    disconnect()            # For test purposes
+    # disconnect()            # For test purposes
